@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Landing Page - Latihan 24</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    
+    <style>
+        /* Animasi CSS dari Modul */
+        .fade-in-up {
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeInUp 1.5s forwards;
+        }
+
+        @keyframes fadeInUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .hover-scale:hover {
+            transform: scale(1.05);
+            transition: transform 0.3s;
+        }
+
+        /* Smooth Scroll */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Styling Hero */
+        .hero {
+            background-color: #333;
+            color: #fff;
+            padding: 100px 0;
+        }
+
+        /* Styling Card & Gambar */
+        .card-img-top {
+            height: 180px;
+            object-fit: cover;
+        }
+
+        .pricing-plan {
+            transition: transform 0.2s ease-in-out;
+        }
+
+        .pricing-plan:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Styling Ikon Logo */
+        .navbar-brand i {
+            font-size: 2rem;
+            color: #0dcaf0; /* Warna biru cerah seperti web modern */
+            transition: transform 0.3s ease;
+        }
+
+        .navbar-brand:hover i {
+            transform: rotate(15deg);
+        }
+
+        footer .footer-logo i {
+            font-size: 3rem;
+            color: #0dcaf0;
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top shadow">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <i class="bi bi-cpu-fill"></i>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#services">Layanan</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#pricing">Pricing</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#testimonials">Testimonial</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <section id="hero" class="hero text-center">
+        <div class="container fade-in-up">
+            <h1 class="display-4 fw-bold">Selamat Datang di Situs Kami</h1>
+            <p class="lead">Kami memberikan layanan terbaik untuk kebutuhan Anda</p>
+            <a href="#services" class="btn btn-primary btn-lg px-5 shadow">Pelajari Lebih Lanjut</a>
+        </div>
+    </section>
+
+    <section id="services" class="container mt-5 pt-5">
+        <h2 class="text-center mb-5 fw-bold">Layanan Kami</h2>
+        <div class="row g-4">
+            <div class="col-md-4 fade-in-up">
+                <div class="card h-100 shadow-sm hover-scale border-0">
+                    <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=500" class="card-img-top" alt="Layanan 1">
+                    <div class="card-body text-center">
+                        <h5 class="card-title fw-bold">Layanan 1</h5>
+                        <p class="card-text text-muted">Deskripsi layanan pertama yang kami tawarkan secara profesional.</p>
+                        <a href="#" class="btn btn-outline-primary rounded-pill">Detail</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 fade-in-up">
+                <div class="card h-100 shadow-sm hover-scale border-0">
+                    <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=500" class="card-img-top" alt="Layanan 2">
+                    <div class="card-body text-center">
+                        <h5 class="card-title fw-bold">Layanan 2</h5>
+                        <p class="card-text text-muted">Deskripsi layanan kedua dengan standar kualitas tinggi.</p>
+                        <a href="#" class="btn btn-outline-primary rounded-pill">Detail</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 fade-in-up">
+                <div class="card h-100 shadow-sm hover-scale border-0">
+                    <img src="https://images.unsplash.com/photo-1551434678-e076c223a692?w=500" class="card-img-top" alt="Layanan 3">
+                    <div class="card-body text-center">
+                        <h5 class="card-title fw-bold">Layanan 3</h5>
+                        <p class="card-text text-muted">Solusi layanan ketiga untuk efisiensi bisnis Anda.</p>
+                        <a href="#" class="btn btn-outline-primary rounded-pill">Detail</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="testimonials" class="container mt-5 pt-5">
+        <h2 class="text-center mb-4 fw-bold">Testimoni Pengguna</h2>
+        <div id="testimonialCarousel" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner text-center">
+                <div class="carousel-item active">
+                    <div class="d-flex justify-content-center">
+                        <div class="card border-0 shadow-sm p-4 bg-light" style="max-width: 500px;">
+                            <img src="https://randomuser.me/api/portraits/men/32.jpg" class="rounded-circle mx-auto mb-3" width="80" alt="User 1">
+                            <h5>Pengguna 1</h5>
+                            <p class="fst-italic text-muted">"Layanan yang sangat memuaskan dan responsif!"</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="d-flex justify-content-center">
+                        <div class="card border-0 shadow-sm p-4 bg-light" style="max-width: 500px;">
+                            <img src="https://randomuser.me/api/portraits/women/44.jpg" class="rounded-circle mx-auto mb-3" width="80" alt="User 2">
+                            <h5>Pengguna 2</h5>
+                            <p class="fst-italic text-muted">"Kualitas pelayanan terbaik yang pernah saya rasakan."</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon bg-dark rounded-circle" aria-hidden="true"></span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon bg-dark rounded-circle" aria-hidden="true"></span>
+            </button>
+        </div>
+    </section>
+
+    <section id="pricing" class="container mt-5 pt-5 mb-5">
+        <h2 class="text-center mb-5 fw-bold">Pricing Plan</h2>
+        <div class="row g-4">
+            <div class="col-md-4">
+                <div class="card pricing-plan text-center shadow-sm border-0 fade-in-up">
+                    <div class="card-header bg-primary text-white py-3 fw-bold">Paket Basic</div>
+                    <div class="card-body py-4">
+                        <h3 class="card-title fw-bold">$19.99/bulan</h3>
+                        <ul class="list-unstyled my-4 text-muted">
+                            <li>Fitur 1</li>
+                            <li>Fitur 2</li>
+                            <li>Fitur 3</li>
+                        </ul>
+                        <a href="#" class="btn btn-primary px-4 rounded-pill">Pilih Paket</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card pricing-plan text-center shadow-sm border-0 fade-in-up">
+                    <div class="card-header bg-success text-white py-3 fw-bold">Paket Premium</div>
+                    <div class="card-body py-4">
+                        <h3 class="card-title fw-bold">$29.99/bulan</h3>
+                        <ul class="list-unstyled my-4 text-muted">
+                            <li>Fitur 1</li>
+                            <li>Fitur 2</li>
+                            <li>Fitur 3</li>
+                        </ul>
+                        <a href="#" class="btn btn-success px-4 rounded-pill">Pilih Paket</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card pricing-plan text-center shadow-sm border-0 fade-in-up">
+                    <div class="card-header bg-warning text-white py-3 fw-bold">Paket Pro</div>
+                    <div class="card-body py-4">
+                        <h3 class="card-title fw-bold">$49.99/bulan</h3>
+                        <ul class="list-unstyled my-4 text-muted">
+                            <li>Fitur 1</li>
+                            <li>Fitur 2</li>
+                            <li>Fitur 3</li>
+                        </ul>
+                        <a href="#" class="btn btn-warning px-4 rounded-pill text-white">Pilih Paket</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-dark text-light text-center py-5">
+        <div class="container">
+            <div class="footer-logo mb-3">
+                <i class="bi bi-cpu-fill"></i>
+            </div>
+            
+            <p class="mb-2 text-secondary small">© 2024. All rights reserved.</p>
+            <div class="mb-3">
+                <a href="#" class="text-secondary mx-2 text-decoration-none small">Privacy Policy</a>
+                <a href="#" class="text-secondary mx-2 text-decoration-none small">Terms</a>
+            </div>
+            <div class="mt-3 fs-5">
+                <a href="#" class="text-light mx-3"><i class="bi bi-facebook"></i></a>
+                <a href="#" class="text-light mx-3"><i class="bi bi-twitter-x"></i></a>
+                <a href="#" class="text-light mx-3"><i class="bi bi-instagram"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
